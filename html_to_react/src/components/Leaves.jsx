@@ -19,9 +19,9 @@ const Leaves = () => {
     return (
         <div className="leaves">
             <h2>Teachers on leave</h2>
-            <TeacherLeave profilePhoto={Profile2} name="The Professor" leaveType="Full Day" />
-            <TeacherLeave profilePhoto={Profile3} name="Lisa Manobal" leaveType="Half Day" />
-            <TeacherLeave profilePhoto={Profile4} name="Himanshu Jindal" leaveType="Full Day" />
+                <TeacherLeave profilePhoto={Profile2} name="The Professor" leaveType="Full Day" />
+                <TeacherLeave profilePhoto={Profile3} name="Lisa Manobal" leaveType="Half Day" />
+                <TeacherLeave profilePhoto={Profile4} name="Himanshu Jindal" leaveType="Full Day" />
         </div>
     );
 };

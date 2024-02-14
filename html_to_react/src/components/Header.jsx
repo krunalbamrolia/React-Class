@@ -16,7 +16,7 @@ const Header = () => {
                 <h2>U<span className="danger">M</span>S</h2>
             </div>
             <div className="navbar">
-                <a className="active">
+                <a class="active">
                     <span className="material-icons-sharp">home</span>
                     <h3>Home</h3>
                 </a>
@@ -28,10 +28,11 @@ const Header = () => {
                     <span className="material-icons-sharp">grid_view</span>
                     <h3>Examination</h3>
                 </a>
-                <a>
+                <a href='./password.html'>
                     <span className="material-icons-sharp">password</span>
                     <h3>Change Password</h3>
                 </a>
+
                 <a>
                     <span className="material-icons-sharp">logout</span>
                     <h3>Logout</h3>

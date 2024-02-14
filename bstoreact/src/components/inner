@@ -1,0 +1,16 @@
+
+const Inner =()=>{
+<section className="inner text-center" id="inner">
+        <div className="inner-content">
+            <div className="title">
+                <span>Thomas Rhythm</span>
+            </div>
+            <div className="sub-title">
+                <span>Extraordinary art director & creative minimalism lover</span>
+            </div>
+        </div>
+        <span className="inner-decor-down rhomb-icon white-icon"><i className="fa fa-chevron-down" aria-hidden="true"></i></span>
+       </section>
+
+}
+export default Inner
