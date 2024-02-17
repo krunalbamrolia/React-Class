@@ -2,6 +2,8 @@
 
 # dependencies
 /node_modules
+# /src/components/SmoothScrollingLinks.jsx
+/SmoothScrollingLinks.jsx
 /.pnp
 .pnp.js
 

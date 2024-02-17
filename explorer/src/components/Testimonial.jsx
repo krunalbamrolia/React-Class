@@ -1,5 +1,5 @@
 import React from 'react';
-import SubTestimonial from './SubTestimonial';
+import SubTestimonial from './data/SubTestimonial';
 
 const Testimonial = () => {
   const testimonials = [
@@ -20,7 +20,7 @@ const Testimonial = () => {
       photo: 'https://i.postimg.cc/fy90qvkV/male-photo3.jpg',
       rating: 5,
       text: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Impedit voluptas cupiditate aspernatur odit doloribus non.',
-    },
+    }
   ];
 
   return (

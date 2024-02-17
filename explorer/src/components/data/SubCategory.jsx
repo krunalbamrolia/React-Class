@@ -11,12 +11,7 @@ const SubCategory = ({ foodItems }) => {
               <img src={item.image} alt="error" />
               <div className="img-content">
                 <h3>{item.name}</h3>
-                <a
-                  href={item.link}
-                  className="btn btn-primary"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
+                <a href={item.link} className="btn btn-primary" target="_blank" rel="noopener noreferrer" >
                   learn more
                 </a>
               </div>

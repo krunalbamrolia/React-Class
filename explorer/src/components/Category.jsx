@@ -1,5 +1,5 @@
 import React from 'react';
-import SubCategory from './SubCategory';
+import SubCategory from './data/SubCategory';
 
 const Category = () => {
   const foodItems = [
