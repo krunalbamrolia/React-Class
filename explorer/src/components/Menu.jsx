@@ -38,7 +38,7 @@ const Menu = () => {
       image: 'https://i.postimg.cc/Jnxc8xQt/food-menu6.jpg',
       description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, quae.',
       price: 350,
-    },
+    }
   ];
 
   return (

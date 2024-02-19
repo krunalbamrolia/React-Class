@@ -1,5 +1,5 @@
 import React from 'react';
-import MenuItem from './MenuItems';
+import MenuItem from './item/MenuItems';
 
 const SubMenu = ({ menuItems }) => {
   return (
