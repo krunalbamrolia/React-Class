@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-// import Kids from "../../assets/kids.webp";
 import Sign from "../../assets/signup.jpg";
 import Logo from "../../assets/cn.jpeg";
 import { FaEye, FaEyeSlash } from "react-icons/fa6";
