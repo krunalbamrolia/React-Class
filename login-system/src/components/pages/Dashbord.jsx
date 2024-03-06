@@ -10,6 +10,8 @@ import Popeye from '../../assets/Popeye.jpg';
 import ScoobyDoo from '../../assets/Scooby-Doo.jpg';
 import Spd from '../../assets/spd.jpg';
 import Train from '../../assets/thomas-train.jpg';
+import NavBar from '../NavBar';
+// import CardAdd from './CardAdd';
 
 const cartoonsData = [
   {
@@ -65,8 +67,14 @@ const cartoonsData = [
 ];
 
 const Dashboard = () => {
+  // const [cards, setCards] = useState([]); 
+
+  // const handleAddCard = (newCard) => {
+  //   setCards([...cards, newCard]); 
+  // };
   return (
     <div>
+      <NavBar />
       <DashboardData cartoons={cartoonsData} />
     </div>
   );
