@@ -16,13 +16,13 @@ const CardAdd = ({ onAddCard, onClose }) => {
     setTitle('');
     setImage('');
     setDescription('');
-    onClose(); 
+    onClose();
   };
 
   return (
     <div style={styles.container}>
       <div style={styles.modal}>
-        <button style={styles.closeButton} onClick={onClose}>&times;</button> {/* Close button */}
+        <button style={styles.closeButton} onClick={onClose}>&times;</button>
         <div style={styles.modalContent}>
           <h2 style={styles.title}>Add New Card</h2>
           <form onSubmit={handleSubmit}>
@@ -35,8 +35,8 @@ const CardAdd = ({ onAddCard, onClose }) => {
               <textarea id="description" style={{ ...styles.input, ...styles.textarea }} value={description} onChange={(e) => setDescription(e.target.value)} />
             </div>
             <div style={styles.formGroup}>
-              <label style={styles.label} htmlFor="imageFile">Upload Image:</label>
-              <input type="file" id="imageFile" style={styles.fileInput} onChange={(e) => setImage(e.target.files[0])} />
+              <label style={styles.label} htmlFor="imageFile">Upload Image (URL):</label>
+              <input type="url" id="imageFile" style={styles.input} value={image} onChange={(e) => setImage(e.target.value)} />
             </div>
             <button type="submit" style={styles.button}>Add Card</button>
           </form>
@@ -119,3 +119,4 @@ const styles = {
 };
 
 export default CardAdd;
+

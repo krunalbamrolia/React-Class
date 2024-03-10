@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from "react-router-dom";
-import CardAdd from './pages/CardAdd'; 
+import CardAdd from './pages/CardAdd';
 
 const NavBar = ({ onAddCard }) => {
   const [showPopup, setShowPopup] = useState(false);
@@ -10,7 +10,7 @@ const NavBar = ({ onAddCard }) => {
     setShowLogoutMessage(true);
 
     setTimeout(() => {
-      window.location.href = '/'; 
+      window.location.href = '/';
     }, 1000);
   };
 
@@ -56,3 +56,4 @@ const NavBar = ({ onAddCard }) => {
 }
 
 export default NavBar;
+
