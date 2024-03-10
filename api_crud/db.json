@@ -1,0 +1,69 @@
+{
+  "group": [
+    {
+      "name": "krunal",
+      "email": "kuniyoo@gmail.com",
+      "age": "23"
+    },
+    {
+      "name": "jenish",
+      "email": "jeniyo@gmail.com",
+      "age": "20"
+    },
+    {
+      "name": "priyank",
+      "email": "pilo@gmail.com",
+      "age": "22"
+    },
+    {
+      "name": "yash",
+      "email": "yashli@gmail.com",
+      "age": "18"
+    },
+    {
+      "name": "bhargav",
+      "email": "bhago@gmail.com",
+      "age": "21"
+    },
+    {
+      "name": "akash",
+      "email": "akash@gmail.com",
+      "age": "27"
+    },
+    {
+      "id": "e631"
+    }
+  ],
+  "faculty": [
+    {
+      "first_name": "milan",
+      "last_name": "bhut",
+      "email": "milan.bhut@gmail.com",
+      "gender": "male"
+    },
+    {
+      "first_name": "gravity",
+      "last_name": "dhameliya",
+      "email": "garvit.dhameliya@gmail.com",
+      "gender": "Male"
+    },
+    {
+      "first_name": "neha",
+      "last_name": "kikani",
+      "email": "neha.kikani@gmail.com",
+      "gender": "Female"
+    },
+    {
+      "first_name": "hinal",
+      "last_name": "patel",
+      "email": "hinal.patel@gmail.com",
+      "gender": "Female"
+    },
+    {
+      "first_name": "meet",
+      "last_name": "patel",
+      "email": "meet.patel@gmail.com",
+      "gender": "Male"
+    }
+  ]
+}
