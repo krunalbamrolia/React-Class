@@ -1,0 +1,142 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "name": "Laptop",
+      "description": "A high-performance laptop for professional use",
+      "price": 10
+    },
+    {
+      "id": "2",
+      "name": "Smartphone",
+      "description": "A sleek and powerful smartphone with advanced features",
+      "price": 500
+    },
+    {
+      "id": "3",
+      "name": "Headphones",
+      "description": "High-quality headphones for immersive audio experience",
+      "price": 150
+    },
+    {
+      "id": "4",
+      "name": "Tablet",
+      "description": "A versatile tablet for work and entertainment",
+      "price": 350
+    },
+    {
+      "id": "5",
+      "name": "Smart Watch",
+      "description": "A stylish and functional smartwatch for active lifestyles",
+      "price": 150
+    },
+    {
+      "id": "6",
+      "name": "Wireless Earbuds",
+      "description": "Wireless earbuds with superior sound quality",
+      "price": 150
+    },
+    {
+      "id": "7",
+      "name": "Digital Camera",
+      "description": "Capture your memories with this high-resolution digital camera",
+      "price": 450
+    },
+    {
+      "id": "8",
+      "name": "Gaming Console",
+      "description": "Experience immersive gaming with this next-gen gaming console",
+      "price": 450
+    },
+    {
+      "id": "9",
+      "name": "Desktop Computer",
+      "description": "A powerful desktop computer for productivity and entertainment",
+      "price": "100"
+    },
+    {
+      "id": "10",
+      "name": "Wireless Router",
+      "description": "High-speed wireless router for seamless internet connectivity",
+      "price": 100
+    },
+    {
+      "id": "11",
+      "name": "External Hard Drive",
+      "description": "Store your files securely with this external hard drive",
+      "price": 90
+    },
+    {
+      "id": "12",
+      "name": "Bluetooth Speaker",
+      "description": "Portable Bluetooth speaker for enjoying music on the go",
+      "price": 50
+    },
+    {
+      "id": "13",
+      "name": "Fitness Tracker",
+      "description": "Track your fitness goals with this advanced fitness tracker",
+      "price": 130
+    },
+    {
+      "id": "14",
+      "name": "Electric Toothbrush",
+      "description": "An electric toothbrush for efficient dental hygiene",
+      "price": 60
+    },
+    {
+      "id": "15",
+      "name": "Coffee Maker",
+      "description": "Brew your favorite coffee with this programmable coffee maker",
+      "price": 90
+    },
+    {
+      "id": "16",
+      "name": "Smart Thermostat",
+      "description": "A smart thermostat for energy-efficient home heating and cooling",
+      "price": 150
+    },
+    {
+      "id": "17",
+      "name": "Portable Charger",
+      "description": "Keep your devices charged on the go with this portable charger",
+      "price": 50
+    },
+    {
+      "id": "18",
+      "name": "Security Camera",
+      "description": "Monitor your home with this HD security camera",
+      "price": 200
+    },
+    {
+      "id": "19",
+      "name": "Yoga Mat",
+      "description": "High-quality yoga mat for comfortable and safe yoga practice",
+      "price": "50"
+    },
+    {
+      "id": "20",
+      "name": "Wireless Mouse",
+      "description": "Ergonomic wireless mouse for comfortable computing",
+      "price": 30
+    },
+    {
+      "id": "5074",
+      "name": "Aron123",
+      "description": "tihs is perfume of car",
+      "price": "350"
+    },
+    {
+      "id": "fc7c",
+      "name": "car32",
+      "description": "this is one type of comman  device",
+      "price": "20"
+    },
+    {
+      "id": "db8f",
+      "name": "pan parag",
+      "description": "why people eat this ",
+      "price": "5"
+    }
+  ]
+}

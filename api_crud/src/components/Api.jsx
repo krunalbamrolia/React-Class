@@ -41,6 +41,9 @@ const Api = () => {
     });
   };
 
+  //update data
+  
+
   useEffect(() => {
     //get data
     fetchData();
