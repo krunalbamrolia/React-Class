@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import { api_url } from './constant/constant';
 
-function EditProductForm({ product, onEdit }) {
+function EditProductForm({ product, onEdit, onClose }) {
   const [editedProduct, setEditedProduct] = useState(product);
 
   const handleInputChange = (event) => {
@@ -13,7 +14,7 @@ function EditProductForm({ product, onEdit }) {
   };
 
   const handleEdit = () => {
-    axios.put(`http://localhost:3001/products/${editedProduct.id}`, editedProduct)
+    axios.put(api_url + `/${editedProduct.id}`, editedProduct)
       .then(() => {
         onEdit();
       })
@@ -23,15 +24,20 @@ function EditProductForm({ product, onEdit }) {
   };
 
   return (
-    <div>
-      <h2>Edit Product</h2>
-      <label htmlFor="name">Name:</label>
-      <input type="text" id="name" name="name" value={editedProduct.name} onChange={handleInputChange} />
-      <label htmlFor="description">Description:</label>
-      <input type="text" id="description" name="description" value={editedProduct.description} onChange={handleInputChange} />
-      <label htmlFor="price">Price:</label>
-      <input type="text" id="price" name="price" value={editedProduct.price} onChange={handleInputChange} />
-      <button onClick={handleEdit}>Save Changes</button>
+    <div className="popup-overlay">
+      <div className="popup">
+        <div className="popup-inner">
+          <button className="close-btn" onClick={onClose}>close</button>
+          <h2>Edit Product</h2>
+          <label>Name:</label>
+          <input type="text" name="name" value={editedProduct.name} onChange={handleInputChange} />
+          <label>Description:</label>
+          <input type="text" name="description" value={editedProduct.description} onChange={handleInputChange} />
+          <label>Price:</label>
+          <input type="number" name="price" value={editedProduct.price} onChange={handleInputChange} />
+          <button type="submit" onClick={handleEdit}>Save Changes</button>
+        </div>
+      </div>
     </div>
   );
 }

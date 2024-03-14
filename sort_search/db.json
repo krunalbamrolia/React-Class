@@ -68,9 +68,9 @@
     },
     {
       "id": "12",
-      "name": "Bluetooth Speaker",
+      "name": "Bluetooth Speaker ",
       "description": "Portable Bluetooth speaker for enjoying music on the go",
-      "price": 50
+      "price": "5000"
     },
     {
       "id": "13",
@@ -121,12 +121,6 @@
       "price": 30
     },
     {
-      "id": "5074",
-      "name": "Aron123",
-      "description": "tihs is perfume of car",
-      "price": "350"
-    },
-    {
       "id": "fc7c",
       "name": "car32",
       "description": "this is one type of comman  device",
@@ -137,6 +131,12 @@
       "name": "pan parag",
       "description": "why people eat this ",
       "price": "5"
+    },
+    {
+      "id": "0470",
+      "name": "ram trucks",
+      "description": "scadscdsas ads  wwsdsdcdsa",
+      "price": "95000"
     }
   ]
 }
