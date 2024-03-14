@@ -1,41 +1,5 @@
 {
-  "product": [
-    {
-      "id": "d644",
-      "name": "moblie",
-      "price": "2000"
-    },
-    {
-      "id": "b88e",
-      "name": "moblie",
-      "price": "2000"
-    },
-    {
-      "id": "afd5",
-      "name": "moblie",
-      "price": "2000"
-    },
-    {
-      "id": "6218",
-      "name": "moblie",
-      "price": "2000"
-    },
-    {
-      "id": "da23",
-      "name": "moblie",
-      "price": "2000"
-    },
-    {
-      "id": "4958",
-      "name": "moblie",
-      "price": "2000"
-    },
-    {
-      "id": "d522",
-      "name": "car",
-      "price": "500000"
-    }
-  ],
+  "product": [],
   "group": [
     {
       "name": "krunal",
@@ -119,27 +83,6 @@
     },
     {
       "id": "1723",
-      "first_name": "",
-      "last_name": "",
-      "gender": "",
-      "email": ""
-    },
-    {
-      "id": "4553",
-      "first_name": "",
-      "last_name": "",
-      "gender": "",
-      "email": ""
-    },
-    {
-      "id": "9556",
-      "first_name": "",
-      "last_name": "",
-      "gender": "",
-      "email": ""
-    },
-    {
-      "id": "57d4",
       "first_name": "",
       "last_name": "",
       "gender": "",

@@ -120,7 +120,7 @@ const FullApiCrud = () => {
                                 <h6 class="card-subtitle mb-2 text-muted">{val.gender}</h6>
                                 <h6 class="card-subtitle mb-2 text-muted">{val.email}</h6>
                                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <button className='btn btn-danger mr-3' onClick={DeleteData}>Delete</button>
+                                <button className='btn btn-danger mr-3' onClick={()=>DeleteData(val.id)}>Delete</button>
                                 <button className='btn btn-primary'>Update</button>
                             </div>
                         </div >
