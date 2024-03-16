@@ -15,26 +15,23 @@ function Dashboard() {
     price: ''
   });
   const [showPopup, setShowPopup] = useState(false);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [itemsPerPage, setItemsPerPage] = useState(10);
 
   useEffect(() => {
     fetchProducts();
   }, []);
 
-  const fetchProducts = () => {
-    axios.get(api_url)
-      .then((res) => {
-        setProducts(res.data);
-        setSortedProducts(res.data.slice().sort((a, b) => a.name.localeCompare(b.name)));
-      })
-      .catch((error) => {
-        console.error('Error fetching products: ', error);
-      });
+  const fetchProducts = async () => {
+    let res = await axios.get(api_url)
+    setProducts(res.data);
+    setSortedProducts(res.data.slice().sort((a, b) => a.name.localeCompare(b.name)));
   };
 
   const handleSearch = (event) => {
     const term = event.target.value.toLowerCase();
     setSearchTerm(term);
-    const filtered = products.filter(product => 
+    const filtered = products.filter(product =>
       product.name.toLowerCase().includes(term) ||
       product.price.toString().includes(term)
     );
@@ -47,14 +44,10 @@ function Dashboard() {
     }
   };
 
-  const handleDelete = (productId) => {
-    axios.delete(api_url + `/${productId}`)
-      .then(() => {
-        fetchProducts();
-      })
-      .catch((error) => {
-        console.error('Error deleting product: ', error);
-      });
+  const handleDelete = async (productId) => {
+    await axios.delete(api_url + `/${productId}`)
+    setSortedProducts(sortedProducts.filter((product) => product.id !== productId));
+    console.error('Error deleting product:');
   };
 
   const handleEdit = (productId) => {
@@ -62,20 +55,15 @@ function Dashboard() {
     setEditingProduct(productToEdit);
   };
 
-  const handleAdd = () => {
-    axios.post(api_url, newProduct)
-      .then(() => {
-        fetchProducts();
-        setNewProduct({
-          name: '',
-          description: '',
-          price: ''
-        });
-        setShowPopup(false); 
-      })
-      .catch((error) => {
-        console.error('Error adding new product: ', error);
-      });
+  const handleAdd = async () => {
+      let  newProductData = {
+        name : newProduct.name,
+        price : newProduct.price,
+        description : newProduct.description
+      };
+      const response = await axios.post(api_url, newProductData);
+      setProducts([...products, response.data]);
+      setShowPopup(false);
   };
 
   const handleEditComplete = () => {
@@ -91,52 +79,64 @@ function Dashboard() {
     });
   };
 
+  const indexOfLastItem = currentPage * itemsPerPage;
+  const indexOfFirstItem = indexOfLastItem - itemsPerPage;
+  const currentItems = sortedProducts.slice(indexOfFirstItem, indexOfLastItem);
+
+  const paginate = (pageNumber) => setCurrentPage(pageNumber);
+
   return (
     <>
-      <div>
-        <button className="btn btn-primary float-right" onClick={() => setShowPopup(true)}>Add Product</button>
-        <label htmlFor="search">Search: </label>
-        <input type="text" id="search" value={searchTerm} onChange={handleSearch} />
-      </div>
-      <table>
-        <thead>
-          <tr>
-            <th>ID</th>
-            <th>Name</th>
-            <th>Description</th>
-            <th>Price</th>
-            <th>Action</th>
-          </tr>
-        </thead>
-        <tbody>
-          {sortedProducts.map((product) => (
-            <tr key={product.id}>
-              <td>{product.id}</td>
-              <td>{product.name}</td>
-              <td>{product.description}</td>
-              <td>{product.price}</td>
-              <td>
-                <button onClick={() => handleEdit(product.id)}>Edit</button>
-                <button onClick={() => handleDeleteConfirmation(product.id)}>Delete</button>
-              </td>
+      <div className="container">
+        <div className="search-container">
+          <input type="search" placeholder='Search The Product..' value={searchTerm} onChange={handleSearch} />
+          <button className="btn btn-primary" onClick={() => setShowPopup(true)}>Add Product</button>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Name</th>
+              <th>Description</th>
+              <th>Price</th>
+              <th>Action</th>
             </tr>
-          ))}
-        </tbody>
-      </table>
-      {showPopup && (
-        <AddProduct
-          newProduct={newProduct}
-          onAdd={handleAdd}
-          onClose={() => setShowPopup(false)}
-          onInputChange={handleInputChange}
-        />
-      )}
-      {editingProduct && (
-        <EditProductForm 
-          product={editingProduct}
-          onClose={() => setShowPopup(false)} 
-          onEdit={handleEditComplete} />
-      )}
+          </thead>
+          <tbody>
+            {currentItems.map((product) => (
+              <tr key={product.id}>
+                <td>{product.id}</td>
+                <td>{product.name}</td>
+                <td>{product.description}</td>
+                <td>{product.price}</td>
+                <td>
+                  <button className="edit-btn" onClick={() => handleEdit(product.id)}>Edit</button>
+                  <button className="delete-btn" onClick={() => handleDeleteConfirmation(product.id)}>Delete</button>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+        {showPopup && (
+          <AddProduct
+            newProduct={newProduct}
+            onAdd={handleAdd}
+            onClose={() => setShowPopup(false)}
+            onInputChange={handleInputChange}
+          />
+        )}
+        {editingProduct && (
+          <EditProductForm
+            product={editingProduct}
+            onEdit={handleEditComplete}
+          />
+        )}
+
+        <div className="pagination">
+          <button onClick={() => paginate(currentPage - 1)} disabled={currentPage === 1}>Previous</button>
+          <button onClick={() => paginate(currentPage + 1)} disabled={currentItems.length < itemsPerPage}>Next</button>
+        </div>
+      </div>
     </>
   );
 }
