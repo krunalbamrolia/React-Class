@@ -3,6 +3,7 @@ import Basic from "./components/Basic";
 import BtnStartReset from "./components/BtnStartReset";
 import ButtonClickUpDown from "./components/ButtonClickUpDown";
 import StopWatch from "./components/StopWatch";
+import CountAmount from './components/CountAmount';
 import './app.css'; 
 
 function App() {
@@ -25,6 +26,10 @@ function App() {
       <StopWatch />
     </div>
     <hr className="separator" />
+    <hr className="separator" />
+    <hr/>
+    <br/>
+    <CountAmount />
   </>
   );
 }

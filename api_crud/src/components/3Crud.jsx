@@ -39,6 +39,7 @@ const Crud = () => {
     const updateProduct = async () => {
         let res = await axios.put(`http://localhost:3001/product/${view.id}`, view.product);
         setData(Data.map((val) => (val.id === res.data.id ? res.data : val)));
+        
     };
 
     // Handle view
@@ -92,8 +93,8 @@ const Crud = () => {
                             <input type="number" className="form-control" value={view.product && view.product.price} name="price" onChange={handleView} />
                         </div>
                         <div className="modal-footer">
-                            <button type="button" className="btn btn-secondary" data-dismiss="modal">Close</button>
-                            <button type="button" className="btn btn-primary" onClick={updateProduct}>Save changes</button>
+                            <button type="reset" className="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="sumbit" className="btn btn-primary" onClick={updateProduct}>Save changes</button>
                         </div>
                     </div>
                 </div>

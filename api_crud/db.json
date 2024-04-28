@@ -1,5 +1,26 @@
 {
-  "product": [],
+  "product": [
+    {
+      "name": "tablat",
+      "price": "8000",
+      "id": "b88c"
+    },
+    {
+      "name": "watch",
+      "price": "22",
+      "id": "e3b9"
+    },
+    {
+      "name": "null",
+      "price": "22",
+      "id": "8a69"
+    },
+    {
+      "name": "mobile",
+      "price": "8000",
+      "id": "4986"
+    }
+  ],
   "group": [
     {
       "name": "krunal",
