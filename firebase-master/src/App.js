@@ -1,47 +1,12 @@
-// import { useEffect, useRef } from "react";
-// import "./App.css";
-// import { getAllData, saveItem } from "./firebase/functions/function";
-
-// function App() {
-//   const fname = useRef();
-//   const email = useRef();
-
-//   const save = () => {
-//     const data = {
-//       email: fname.current.value,
-//       fname: fname.current.value,
-//     };
-
-//     saveItem(data);
-//   };
-
-//   useEffect(() => {
-//     getAllData();
-//   }, []);
-
-//   return (
-//     <div className="App">
-//       <div>
-//         <input type="text" ref={fname} />
-//         <input type="text" ref={email} />
-//         <button onClick={save}>save</button>
-//       </div>
-//     </div>
-//   );
-// }
-
-// export default App;
-
-
 import React from 'react';
+import EmployeeCRUD from './EmployeeCRUD';
 import './App.css';
-import Dashboard from './Dashboard';
 
 function App() {
   return (
-    <div className="App">
-      <h1>My App</h1>
-      <Dashboard />
+    <div className="container mx-auto my-10">
+      <h1 className="text-3xl font-bold text-center">Employee Management</h1>
+      <EmployeeCRUD />
     </div>
   );
 }

@@ -1,59 +1,28 @@
-import { collection, doc, getDocs, setDoc } from "firebase/firestore";
-import { firestore } from "../config";
+import { collection, doc, getDocs, setDoc, deleteDoc, updateDoc } from "firebase/firestore";
+import { firestore } from "../config"; 
 
-// export const saveItem = async (data) => {
-//   console.log(data);
-//   await setDoc(doc(firestore, "test", `${Date.now()}`), data, { merge: true });
-// };
-
-// export const getAllData = async () => {
-//   const allItems = await getDocs(collection(firestore, "test"));
-//   allItems.docs.map((doc) => console.log(doc.data()));
-// };
-
-
-
-// import { collection, doc, getDocs, setDoc, deleteDoc, updateDoc } from "firebase/firestore";
-// import { firestore } from "../config";
-
-// // Create or Update a Document
-// export const saveItem = async (data) => {
-//   await setDoc(doc(firestore, "first-attempt", `${Date.now()}`), data, { merge: true });
-// };
-
-// // Get All Documents
-// export const getAllData = async () => {
-//   const allItems = await getDocs(collection(firestore, "first-attempt"));
-//   return allItems.docs.map((doc) => ({ id: doc.id, data: doc.data() }));
-// };
-
-// // Update a Specific Document by ID
-// export const updateItem = async (id, updatedData) => {
-//   const docRef = doc(firestore, "first-attempt", id);
-//   await updateDoc(docRef, updatedData);
-// };
-
-// // Delete a Specific Document by ID
-// export const deleteItem = async (id) => {
-//   const docRef = doc(firestore, "first-attempt", id);
-//   await deleteDoc(docRef);
-// };
-
-
-export const saveItem = async (data) => {
-  try {
-    await setDoc(doc(firestore, "first-attempt", `${Date.now()}`), data, { merge: true });
-    console.log("Item saved successfully");
-  } catch (error) {
-    console.error("Error saving item:", error);
-  }
+//set document in the database
+export const saveEmployee = async (employee) => {
+  await setDoc(doc(firestore, "employees", `${Date.now()}`), employee, { merge: true });
 };
 
-export const getAllData = async () => {
-  try {
-    const allItems = await getDocs(collection(firestore, "first-attempt"));
-    return allItems.docs.map((doc) => ({ id: doc.id, data: doc.data() }));
-  } catch (error) {
-    console.error("Error getting all data:", error);
-  }
+// Get all employees 
+export const getAllEmployees = async () => {
+  const employeeCollection = await getDocs(collection(firestore, "employees"));
+  return employeeCollection.docs.map((doc) => ({
+    id: doc.id,
+    ...doc.data(),
+  }));
+};
+
+// Update a specific employee by ID
+export const updateEmployee = async (id, updatedEmployee) => {
+  const docRef = doc(firestore, "employees", id);
+  await updateDoc(docRef, updatedEmployee);
+};
+
+// Delete a specific employee by ID
+export const deleteEmployee = async (id) => {
+  const docRef = doc(firestore, "employees", id);
+  await deleteDoc(docRef);
 };
