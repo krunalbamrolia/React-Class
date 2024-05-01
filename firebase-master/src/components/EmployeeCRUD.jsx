@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Swal from 'sweetalert2';
-import { saveEmployee, getAllEmployees, deleteEmployee, updateEmployee } from './firebase/functions/function';
+import { saveEmployee, getAllEmployees, deleteEmployee, updateEmployee } from '../firebase/functions/function';
 
 function EmployeeCRUD() {
   const [employees, setEmployees] = useState([]);

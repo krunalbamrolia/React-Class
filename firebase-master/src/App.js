@@ -1,5 +1,5 @@
 import React from 'react';
-import EmployeeCRUD from './EmployeeCRUD';
+import EmployeeCRUD from './components/EmployeeCRUD';
 import './App.css';
 
 function App() {
